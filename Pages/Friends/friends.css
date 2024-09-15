@@ -1,0 +1,90 @@
+.friends-page {
+    padding: 20px;
+    margin-bottom: 20px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+@media (max-width: 767px) {
+    .friends-page {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+.friends-page .friend {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+}
+.friends-page .friend.vip::before {
+    content: "VIP";
+    position: absolute;
+    top: 68%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 40px;
+    opacity: .2;
+    color: var(--orange-color);
+    font-weight: bold;
+}
+.friends-page .friend .icons i {
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 50%;
+    color: var(--grey-color);
+    font-size: 13px;
+    cursor: pointer;
+    transition: .3s;
+}
+.friends-page .friend .icons i:hover {
+    background-color: var(--blue-color);
+    color: white;
+}
+.friends-page .friend .name {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.friends-page .friend .name img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+.friends-page .friend .name h4 {
+    margin: 5px 0 0;
+}
+.friends-page .friend .name p {
+    margin: 5px 0 0;
+    color: var(--grey-color);
+    font-size: 13px;
+}
+.friends-page .friend .info {
+    font-size: 14px;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+.friends-page .friend .join {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+.friends-page .friend .join p {
+    color: var(--grey-color);
+    margin: 0;
+    font-size: 13px;
+}
+.friends-page .friend .join div {
+    display: flex;
+}
+.friends-page .friend .join div a {
+    color: white;
+    border-radius: 6px;
+    background-color: var(--blue-color);
+    cursor: pointer;
+    padding: 5px 10px;
+    font-size: 13px;
+}
+.friends-page .friend .join div a:nth-of-type(2) {
+    background-color: var(--red-color);
+    margin-left: 4px;
+}
